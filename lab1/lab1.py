@@ -1,7 +1,7 @@
 import socket
 import threading
 import sys
-import time
+import timef
 import json
 from datetime import datetime
 from http.server import HTTPServer, SimpleHTTPRequestHandler
