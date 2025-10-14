@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чат но в браузере</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Courier New', monospace;
+            background: #FFFFEE;
+            color: #000;
+            line-height: 1.3;
+            font-size: 13px;
+        }
+        .container { max-width: 100%; margin: 0 auto; padding: 5px; }
+        .header {
+            background: #FEEDD3;
+            border: 1px solid #D9BFB7;
+            padding: 8px;
+            margin-bottom: 8px;
+            border-radius: 3px;
+        }
+        .header h1 {
+            color: #800000;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            height: 95vh;
+            border: 1px solid #D9BFB7;
+            background: white;
+        }
+        .messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 8px;
+            background: #F0E0D6;
+        }
+        .message {
+            margin-bottom: 12px;
+            padding: 8px;
+            background: white;
+            border: 1px solid #D9BFB7;
+            border-radius: 2px;
+        }
+        .message-header {
+            font-size: 11px;
+            color: #789922;
+            margin-bottom: 4px;
+            border-bottom: 1px solid #E0D0C0;
+            padding-bottom: 2px;
+            font-weight: bold;
+        }
+        .message-text { word-wrap: break-word; }
+        .input-area {
+            display: flex;
+            padding: 8px;
+            background: #FEEDD3;
+            border-top: 1px solid #D9BFB7;
+        }
+        .message-input {
+            flex: 1;
+            padding: 6px;
+            border: 1px solid #D9BFB7;
+            border-radius: 2px;
+            resize: none;
+            height: 50px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            background: #FFF;
+        }
+        .send-button {
+            margin-left: 8px;
+            padding: 6px 12px;
+            background: #FEEDD3;
+            color: #800000;
+            border: 1px solid #D9BFB7;
+            border-radius: 2px;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+        }
+        .send-button:hover { background: #E0D0C0; }
+        .send-button:disabled {
+            background: #CCCCCC;
+            color: #666;
+            cursor: not-allowed;
+        }
+        .status {
+            padding: 4px 8px;
+            background: #FEEDD3;
+            border-top: 1px solid #D9BFB7;
+            font-size: 11px;
+            color: #800000;
+            font-weight: bold;
+        }
+        .status.connected { color: #008000; }
+        .status.error { color: #FF0000; }
+        .quote {
+            color: #789922;
+            border-left: 2px solid #789922;
+            padding-left: 6px;
+            margin: 3px 0;
+        }
+        .error { color: #FF0000; background: #FFE0E0; }
+        .info { color: #0000FF; background: #E0E0FF; }
+        .user { background: #F0FFF0; }
+        .new-message-indicator {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            background: #ff6600;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 11px;
+            cursor: pointer;
+            z-index: 1000;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="new-message-indicator" id="newMessageIndicator">
+        Новые сообщения ↓
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>TCP чат</h1>
+        </div>
+
+        <div class="chat-container">
+            <div class="messages" id="messages">
+                <div class="message info">
+                    <div class="message-header">Система</div>
+                    <div class="message-text">Загрузка чата...</div>
+                </div>
+            </div>
+            <div class="status" id="status">Подключение...</div>
+            <div class="input-area">
+                <textarea
+                    id="messageInput"
+                    class="message-input"
+                    placeholder="Введите сообщение..."
+                    disabled
+                ></textarea>
+                <button id="sendButton" class="send-button" disabled>Отпр.</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class ChatClient {
+            constructor() {
+                this.messagesDiv = document.getElementById('messages');
+                this.messageInput = document.getElementById('messageInput');
+                this.sendButton = document.getElementById('sendButton');
+                this.statusDiv = document.getElementById('status');
+                this.newMessageIndicator = document.getElementById('newMessageIndicator');
+
+                this.isConnected = false;
+                this.pollInterval = null;
+                this.lastMessageCount = 0;
+                this.lastMessageId = null;
+                this.isUserScrolling = false;
+                this.autoScroll = true;
+                this.scrollPosition = 0;
+                this.newMessagesCount = 0;
+
+                this.init();
+            }
+
+            init() {
+                console.log('Инициализация чата с автообновлением');
+                this.setupEventListeners();
+                this.startPolling();
+            }
+
+            setupEventListeners() {
+                this.sendButton.onclick = () => this.sendMessage();
+                this.messageInput.onkeypress = (e) => {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                        e.preventDefault();
+                        this.sendMessage();
+                    }
+                };
+
+                // Отслеживание прокрутки пользователя
+                this.messagesDiv.addEventListener('scroll', () => {
+                    this.handleUserScroll();
+                });
+
+                // Клик по индикатору новых сообщений
+                this.newMessageIndicator.onclick = () => {
+                    this.scrollToBottom();
+                    this.hideNewMessageIndicator();
+                };
+
+                // Автоскролл при вводе сообщения
+                this.messageInput.addEventListener('focus', () => {
+                    this.autoScroll = true;
+                    this.scrollToBottom();
+                });
+            }
+
+            handleUserScroll() {
+                const tolerance = 10;
+                const isAtBottom = this.messagesDiv.scrollHeight - this.messagesDiv.clientHeight <= this.messagesDiv.scrollTop + tolerance;
+
+                if (isAtBottom) {
+                    // Пользователь прокрутил до самого низа
+                    this.autoScroll = true;
+                    this.hideNewMessageIndicator();
+                } else {
+                    // Пользователь прокрутил вверх
+                    this.autoScroll = false;
+                }
+
+                this.scrollPosition = this.messagesDiv.scrollTop;
+            }
+
+            async startPolling() {
+                // Более частое обновление для живого чата
+                this.pollInterval = setInterval(() => this.checkMessages(), 500);
+                await this.checkMessages();
+            }
+
+            async checkMessages() {
+                try {
+                    const response = await fetch('/messages?t=' + Date.now());
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                    }
+
+                    const messages = await response.json();
+
+                    if (Array.isArray(messages)) {
+                        const hasNewMessages = messages.length > this.lastMessageCount;
+
+                        if (hasNewMessages) {
+                            this.displayMessages(messages);
+
+                            // Показываем индикатор новых сообщений, если пользователь не внизу
+                            if (!this.autoScroll && messages.length > this.lastMessageCount) {
+                                this.newMessagesCount += (messages.length - this.lastMessageCount);
+                                this.showNewMessageIndicator();
+                            }
+
+                            // Автоскролл если пользователь внизу или это первая загрузка
+                            if (this.autoScroll) {
+                                setTimeout(() => this.scrollToBottom(), 50);
+                            } else {
+                                // Сохраняем позицию прокрутки
+                                this.restoreScrollPosition();
+                            }
+                        }
+
+                        this.lastMessageCount = messages.length;
+                        this.setConnected(true);
+                    } else {
+                        throw new Error('Некорректный формат сообщений');
+                    }
+
+                } catch (error) {
+                    console.error('Ошибка получения сообщений:', error);
+                    this.setConnected(false);
+                }
+            }
+
+            displayMessages(messages) {
+                if (!Array.isArray(messages) || messages.length === 0) {
+                    this.messagesDiv.innerHTML = '<div class="message info"><div class="message-text">Нет сообщений</div></div>';
+                    return;
+                }
+
+                // Сохраняем текущую позицию прокрутки перед обновлением
+                const oldScrollHeight = this.messagesDiv.scrollHeight;
+                const oldScrollTop = this.messagesDiv.scrollTop;
+
+                this.messagesDiv.innerHTML = messages.map((msg, index) => {
+                    const time = new Date(msg.timestamp).toLocaleTimeString();
+                    const sender = this.getSenderName(msg.type);
+                    const messageId = `msg-${index}-${msg.timestamp}`;
+
+                    return `
+                        <div class="message ${msg.type}" id="${messageId}">
+                            <div class="message-header">${sender} • ${time}</div>
+                            <div class="message-text">${this.formatText(msg.text)}</div>
+                        </div>
+                    `;
+                }).join('');
+
+                // Восстанавливаем позицию прокрутки
+                if (!this.autoScroll && oldScrollTop > 0) {
+                    const newScrollHeight = this.messagesDiv.scrollHeight;
+                    const heightDiff = newScrollHeight - oldScrollHeight;
+                    this.messagesDiv.scrollTop = oldScrollTop + heightDiff;
+                }
+            }
+
+            showNewMessageIndicator() {
+                this.newMessageIndicator.textContent = `Новые сообщения: ${this.newMessagesCount} ↓`;
+                this.newMessageIndicator.style.display = 'block';
+            }
+
+            hideNewMessageIndicator() {
+                this.newMessageIndicator.style.display = 'none';
+                this.newMessagesCount = 0;
+            }
+
+            scrollToBottom() {
+                this.messagesDiv.scrollTop = this.messagesDiv.scrollHeight;
+                this.autoScroll = true;
+                this.hideNewMessageIndicator();
+            }
+
+            restoreScrollPosition() {
+                // Используем requestAnimationFrame для плавного восстановления
+                requestAnimationFrame(() => {
+                    if (this.scrollPosition > 0 && !this.autoScroll) {
+                        this.messagesDiv.scrollTop = this.scrollPosition;
+                    }
+                });
+            }
+
+            getSenderName(type) {
+                const names = {
+                    'user': 'Я',
+                    'info': 'Система',
+                    'error': 'Ошибка',
+                    'message': 'Другой юзер'
+                };
+                return names[type] || 'Другой юзер';
+            }
+
+            formatText(text) {
+                if (typeof text !== 'string') {
+                    text = String(text);
+                }
+                return text.split('\n')
+                    .map(line => {
+                        if (line.trim().startsWith('>')) {
+                            return `<div class="quote">${this.escapeHtml(line)}</div>`;
+                        }
+                        return this.escapeHtml(line);
+                    })
+                    .join('<br>');
+            }
+
+            escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            }
+
+            async sendMessage() {
+                const text = this.messageInput.value.trim();
+                if (!text || !this.isConnected) return;
+
+                this.setSending(true);
+
+                try {
+                    const response = await fetch('/send', {
+                        method: 'POST',
+                        headers: {'Content-Type': 'text/plain'},
+                        body: text
+                    });
+
+                    const result = await response.json();
+
+                    if (result.status === 'ok') {
+                        this.messageInput.value = '';
+                        // После отправки включаем автоскролл
+                        this.autoScroll = true;
+                        setTimeout(() => this.scrollToBottom(), 100);
+                    } else {
+                        alert('Ошибка: ' + (result.message || 'неизвестная ошибка'));
+                    }
+                } catch (error) {
+                    alert('Ошибка сети: ' + error.message);
+                } finally {
+                    this.setSending(false);
+                }
+            }
+
+            setConnected(connected) {
+                this.isConnected = connected;
+                this.messageInput.disabled = !connected;
+                this.sendButton.disabled = !connected;
+
+                if (connected) {
+                    this.updateStatus('✓ Подключено', 'connected');
+                } else {
+                    this.updateStatus('✗ Ошибка подключения', 'error');
+                }
+            }
+
+            setSending(sending) {
+                this.sendButton.disabled = sending || !this.isConnected;
+                this.sendButton.textContent = sending ? '...' : 'Отпр.';
+            }
+
+            updateStatus(text, className) {
+                this.statusDiv.textContent = `Статус: ${text}`;
+                this.statusDiv.className = `status ${className}`;
+            }
+        }
+
+        // Запуск при загрузке
+        document.addEventListener('DOMContentLoaded', () => {
+            window.chat = new ChatClient();
+        });
+
+        // Глобальные функции для отладки
+        window.debugScroll = function() {
+            const chat = window.chat;
+            console.log('Отладочная информация:');
+            console.log('- autoScroll:', chat.autoScroll);
+            console.log('- scrollPosition:', chat.scrollPosition);
+            console.log('- newMessagesCount:', chat.newMessagesCount);
+            console.log('- scrollTop:', chat.messagesDiv.scrollTop);
+            console.log('- scrollHeight:', chat.messagesDiv.scrollHeight);
+            console.log('- clientHeight:', chat.messagesDiv.clientHeight);
+            console.log('- isAtBottom:', chat.messagesDiv.scrollHeight - chat.messagesDiv.clientHeight <= chat.messagesDiv.scrollTop + 10);
+        };
+    </script>
+</body>
+</html>
