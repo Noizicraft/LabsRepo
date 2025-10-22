@@ -1,0 +1,1541 @@
+{
+  "tunneling": [
+    [
+      {
+        "ts": "2025-10-22T15:48:57.007876",
+        "src_ip": "192.0.2.1",
+        "dst_ip": "198.51.100.1",
+        "query_name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.exfil.example.com",
+        "answers": [],
+        "ttl": 300
+      },
+      "long_domain_name",
+      146
+    ],
+    [
+      {
+        "ts": "2025-10-22T15:48:58.007876",
+        "src_ip": "192.0.2.1",
+        "dst_ip": "198.51.100.1",
+        "query_name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.exfil.example.com",
+        "answers": [],
+        "ttl": 300
+      },
+      "long_domain_name",
+      146
+    ],
+    [
+      {
+        "ts": "2025-10-22T15:48:59.007876",
+        "src_ip": "192.0.2.1",
+        "dst_ip": "198.51.100.1",
+        "query_name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.exfil.example.com",
+        "answers": [],
+        "ttl": 300
+      },
+      "long_domain_name",
+      146
+    ],
+    [
+      {
+        "ts": "2025-10-22T15:49:00.007876",
+        "src_ip": "192.0.2.1",
+        "dst_ip": "198.51.100.1",
+        "query_name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.exfil.example.com",
+        "answers": [],
+        "ttl": 300
+      },
+      "long_domain_name",
+      146
+    ],
+    [
+      {
+        "ts": "2025-10-22T15:49:01.007876",
+        "src_ip": "192.0.2.1",
+        "dst_ip": "198.51.100.1",
+        "query_name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.exfil.example.com",
+        "answers": [],
+        "ttl": 300
+      },
+      "long_domain_name",
+      146
+    ]
+  ],
+  "fastflux": [
+    {
+      "ts": "2025-10-22T16:07:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 20,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:08:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 21,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:09:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 22,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:10:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 23,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:11:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 24,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:12:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 25,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:13:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 26,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:14:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 27,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:15:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 28,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:16:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 29,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:17:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 30,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:18:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 31,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:19:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 32,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:20:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 33,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:21:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 34,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:22:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 35,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:23:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 36,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:24:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 37,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:25:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 38,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:26:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 39,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:27:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 40,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:28:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 41,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:29:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 42,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:30:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 43,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:31:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 44,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:32:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 45,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:33:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 46,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:34:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 47,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:35:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 48,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:36:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 49,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:37:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 50,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:38:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 51,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:39:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 52,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:40:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 53,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:41:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 54,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:42:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 55,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:43:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 56,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:44:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 57,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:45:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 58,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:46:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 59,
+      "tag": "fast-flux-candidate"
+    },
+    {
+      "ts": "2025-10-22T16:47:57.007876",
+      "domain": "badflux.example.com",
+      "unique_ips": 60,
+      "tag": "fast-flux-candidate"
+    }
+  ],
+  "dga": [
+    {
+      "domain": "jajdlwcsssuq.com",
+      "reasons": [
+        [
+          "c/v",
+          5.0
+        ]
+      ]
+    }
+  ],
+  "suspicious_tld": [
+    {
+      "qname": "malicious.top",
+      "tld": "top"
+    },
+    {
+      "qname": "cheap-stuff.tk",
+      "tld": "tk"
+    }
+  ],
+  "excessive": [
+    {
+      "ts": "2025-10-22T18:02:20.007876",
+      "domain": "ddos.example.com",
+      "count": 100,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:20.007876",
+      "domain": "ddos.example.com",
+      "count": 101,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:20.007876",
+      "domain": "ddos.example.com",
+      "count": 102,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:20.007876",
+      "domain": "ddos.example.com",
+      "count": 103,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:20.007876",
+      "domain": "ddos.example.com",
+      "count": 104,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:20.007876",
+      "domain": "ddos.example.com",
+      "count": 105,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:20.007876",
+      "domain": "ddos.example.com",
+      "count": 106,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:20.007876",
+      "domain": "ddos.example.com",
+      "count": 107,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:20.007876",
+      "domain": "ddos.example.com",
+      "count": 108,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:20.007876",
+      "domain": "ddos.example.com",
+      "count": 109,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:20.007876",
+      "domain": "ddos.example.com",
+      "count": 110,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:20.007876",
+      "domain": "ddos.example.com",
+      "count": 111,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:20.007876",
+      "domain": "ddos.example.com",
+      "count": 112,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:20.007876",
+      "domain": "ddos.example.com",
+      "count": 113,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:20.007876",
+      "domain": "ddos.example.com",
+      "count": 114,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:20.007876",
+      "domain": "ddos.example.com",
+      "count": 115,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:20.007876",
+      "domain": "ddos.example.com",
+      "count": 116,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:20.007876",
+      "domain": "ddos.example.com",
+      "count": 117,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:20.007876",
+      "domain": "ddos.example.com",
+      "count": 118,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:20.007876",
+      "domain": "ddos.example.com",
+      "count": 119,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:20.007876",
+      "domain": "ddos.example.com",
+      "count": 120,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 121,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 122,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 123,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 124,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 125,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 126,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 127,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 128,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 129,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 130,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 131,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 132,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 133,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 134,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 135,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 136,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 137,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 138,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 139,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 140,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 141,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 142,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 143,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 144,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 145,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 146,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 147,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 148,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 149,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:21.007876",
+      "domain": "ddos.example.com",
+      "count": 150,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 151,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 152,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 153,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 154,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 155,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 156,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 157,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 158,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 159,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 160,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 161,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 162,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 163,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 164,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 165,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 166,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 167,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 168,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 169,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 170,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 171,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 172,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 173,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 174,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 175,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 176,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 177,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 178,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 179,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:22.007876",
+      "domain": "ddos.example.com",
+      "count": 180,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 181,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 182,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 183,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 184,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 185,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 186,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 187,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 188,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 189,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 190,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 191,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 192,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 193,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 194,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 195,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 196,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 197,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 198,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 199,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 200,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 201,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 202,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 203,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 204,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 205,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 206,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 207,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 208,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 209,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:23.007876",
+      "domain": "ddos.example.com",
+      "count": 210,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 211,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 212,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 213,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 214,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 215,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 216,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 217,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 218,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 219,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 220,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 221,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 222,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 223,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 224,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 225,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 226,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 227,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 228,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 229,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 230,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 231,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 232,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 233,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 234,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 235,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 236,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 237,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 238,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 239,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:24.007876",
+      "domain": "ddos.example.com",
+      "count": 240,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 241,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 242,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 243,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 244,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 245,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 246,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 247,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 248,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 249,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 250,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 251,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 252,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 253,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 254,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 255,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 256,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 257,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 258,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 259,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 260,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 261,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 262,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 263,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 264,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 265,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 266,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 267,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 268,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 269,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:25.007876",
+      "domain": "ddos.example.com",
+      "count": 270,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 271,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 272,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 273,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 274,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 275,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 276,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 277,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 278,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 279,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 280,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 281,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 282,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 283,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 284,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 285,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 286,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 287,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 288,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 289,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 290,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 291,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 292,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 293,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 294,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 295,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 296,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 297,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 298,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 299,
+      "tag": "high-query-rate"
+    },
+    {
+      "ts": "2025-10-22T18:02:26.007876",
+      "domain": "ddos.example.com",
+      "count": 300,
+      "tag": "high-query-rate"
+    }
+  ]
+}
