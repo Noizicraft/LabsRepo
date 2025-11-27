@@ -1,8 +1,3 @@
-#!/usr/bin/env python3
-# win_dns_sniffer_autoiface.py
-# Windows: auto-select interface by outbound IP (no psutil required).
-# Run as Administrator. pip install scapy
-
 import ctypes
 import sys
 import time

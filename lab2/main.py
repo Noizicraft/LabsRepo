@@ -159,8 +159,8 @@ def simple_dga(seed, length=12):
 def run_demo():
     now = datetime.utcnow()
     records = []
-    long_payload = "a" * 128
-    for i in range(5):
+    long_payload = "a" * random.randint(100, 200)
+    for i in range(random.randint(1, 5)):
         records.append(make_record(now, i, f"{long_payload}.exfil.example.com"))
 
     flux_domain = "badflux.example.com"
